@@ -1,9 +1,3 @@
-/*
- Нахождение пары чисел, дающую нужную сумму (через словарь).
-*/
-
-const array = [5, 2, 3, 4, 9, 3];
-
 const summ = (array, summ) => {
   const s = {};
 
@@ -12,11 +6,11 @@ const summ = (array, summ) => {
     if (s[array[i]] === undefined) {
       s[possiblePair] = i;
     } else {
-      return console.log(s[array[i]] + " and " + i);
+      return s[array[i]] + " and " + i;
     }
   }
 
   return null;
 };
 
-summ(array, 8);
+module.exports = summ;
